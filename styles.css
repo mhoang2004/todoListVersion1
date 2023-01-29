@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://thumbs.dreamstime.com/b/background-study-stack-books-time-glass-multicolored-pencils-127589182.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.container h2 {
+    font-size: 4rem;
+    margin: 10px 0;
+    text-shadow:
+    -1px 0px 0px #fff,
+    1px 0px 0px #fff,
+    0px -1px 0px #fff,
+    0px 1px 0px #fff;
+}
+
+#input-todo {
+    width: 410px;
+    padding: 9px 15px 8px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+#add-btn {
+    margin-left: -3px;
+    display: inline;
+    font-size: 1.2rem;
+    background-color: green;
+    text-align: center;
+    color: #fff;
+    padding: 12px 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#add-btn:hover {
+    background-color: rgb(5, 99, 5);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* CSS tasks */
+.task-container {
+    margin: 15px auto 0;
+    min-height: 100px;
+    max-width: 457px;
+    background-color: #fff;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 10px;
+}
+
+.task {
+    list-style: none;
+    text-align: start;
+}
+
+.no-task {
+    font-size: 1.4rem;
+    opacity: 0.7;
+    font-weight: 600;
+    text-align: center;
+}
+
+.edit {
+    font-size: 1.4rem;
+    color: rgb(9, 9, 85);
+    position: relative;
+    top: -1px;
+}
+
+.check {
+    color: rgb(255, 240, 0);
+    font-size: 1.5rem;
+    
+}
+
+.delete {
+    position: relative;
+    top: -1px;
+    color: rgb(255, 9, 31);
+}
+
+.confirm {
+    position: relative;
+    top: -1px;
+    color: blue;
+}
+
+.edit:hover, .delete:hover, .check:hover, .confirm:hover {
+    opacity: 0.85;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+/* 
+#edit.active {
+    color: blue;
+} */
+
+.todo-item {
+    font-size: 1.3rem;
+    display: flex;
+    margin: 25px 0;
+    border-bottom: 1px solid #000;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item p {
+    user-select: none;
+    cursor: pointer;
+}
+
+.todo-item.done p {
+    text-decoration: line-through;
+}  
+
+.todo-icon {
+    user-select: none;
+}
+
+.todo-item:first-child {
+    margin-top: 5px;
+}
+
+footer {
+    display: flex;
+    max-width: 457px;
+    margin: auto;
+    justify-content: flex-start;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.all, .active, .completed, .clear-completed {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.clear-completed {
+    background-color: rgb(255, 9, 108);
+    padding: 0 5px;
+    border-radius: 5px;
+    user-select: none;
+    color: #fff;
+    margin-left: 70px;
+}
+
+.clear-completed:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.input-temp {
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+.display-none {
+    display: none;
+}
+
+.todo-item.no-active .edit{
+    color: gray;
+    pointer-events: none;
+}
+
+/* CSS black background */
+.black-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.black-background-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    user-select: none;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.black-background-wrap p {
+    font-size: 1.2rem;
+}
+
+.confirm-btn {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.yes-wrap {
+    background-color: green;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.no-wrap {
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    width: 67px;
+    border-radius: 5px;
+}
+
+.yes-wrap:hover , .no-wrap:hover {
+    opacity: 0.85;
+}
+
